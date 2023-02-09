@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code:cached
+      - $DEMOS_PATH:/code/demos:ro
+
+    networks:
+      - intranet
+
+networks:
+  intranet:
+    external:
+      name: custom_network

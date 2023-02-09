@@ -1,0 +1,4 @@
+.env
+*.dem
+*.json
+/demos
